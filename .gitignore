@@ -1,69 +1,43 @@
+*.java.hsp
+*.sonarj
+*.sw*
+.DS_Store
+.settings
+.springBeans
+bin
+build.sh
+integration-repo
+ivy-cache
+jxl.log
+jmx.log
+derby.log
+spring-test/test-output/
+.gradle
+argfile*
+pom.xml
+activemq-data/
 
-# intellij files
-.idea/
+classes/
+/build
+buildSrc/build
+/spring-*/build
+/spring-core/kotlin-coroutines/build
+/framework-bom/build
+/integration-tests/build
+/src/asciidoc/build
+target/
+
+# Eclipse artifacts, including WTP generated manifests
+.classpath
+.project
+spring-*/src/main/java/META-INF/MANIFEST.MF
+
+# IDEA artifacts and output dirs
 *.iml
 *.ipr
 *.iws
-build-idea/
-# Eclipse and Intellij put there build files in "out"
-out/
-
-# include shared intellij config
-!.idea/scopes/x_pack.xml
-!.idea/inspectionProfiles/Project_Default.xml
-!.idea/runConfigurations/Debug_Elasticsearch.xml
-!.idea/checkstyle-idea.xml
-
-# These files are generated in the main tree by IntelliJ
-benchmarks/src/main/generated/*
-
-# eclipse files
-.project
-.classpath
-.settings
-# We don't use this any more, but we'll keep it around in gitignore for a while so we don't accidentally commit it
-build-eclipse/
-
-# netbeans files
-nb-configuration.xml
-nbactions.xml
-
-# gradle stuff
-.gradle/
-build/
-
-# vscode stuff
-.vscode/
-
-# vs stuff
-.vs/
-
-# testing stuff
-**/.local*
-.vagrant/
-/logs/
-
-# osx stuff
-.DS_Store
-
-# default folders in which the create_bwc_index.py expects to find old es versions in
-/backwards
-/dev-tools/backwards
-
-# needed in case docs build is run...maybe we can configure doc build to generate files under build?
-html_docs
-
-# random old stuff that we should look at the necessity of...
-/tmp/
-eclipse-build
-
-# projects using testfixtures
-testfixtures_shared/
-
-# These are generated from .ci/jobs.t, .ci/templates.t and .ci/views.t
-.ci/jobs/
-.ci/templates/
-.ci/views/
-
-# Generated
-checkstyle_ide.xml
+.idea
+out
+test-output
+atlassian-ide-plugin.xml
+.gradletasknamecache
