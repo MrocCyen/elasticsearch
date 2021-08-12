@@ -49,12 +49,20 @@ gradlePlugin {
 }
 
 repositories {
-    mavenCentral()
-    gradlePluginPortal()
+  maven { url "https://maven.aliyun.com/repository/central" }
+  maven { url "https://maven.aliyun.com/repository/public" }
+  maven { url "https://maven.aliyun.com/repository/google" }
+  maven { url "https://maven.aliyun.com/repository/grails-core" }
+  maven { url "https://maven.aliyun.com/repository/spring" }
+  maven { url "https://maven.aliyun.com/repository/spring-plugin" }
+  maven { url "https://maven.aliyun.com/repository/apache-snapshots" }
+  maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+  gradlePluginPortal()
+  maven { url 'https://repo.spring.io/plugins-release' }
 }
 
 dependencies {
-    api 'org.apache.maven:maven-model:3.6.2'
+    api 'org.apache.maven:maven-model:3.6.0'
     api 'gradle.plugin.com.github.jengelman.gradle.plugins:shadow:7.0.0'
     api 'org.apache.rat:apache-rat:0.11'
     compileOnly "com.puppycrawl.tools:checkstyle:8.42"
