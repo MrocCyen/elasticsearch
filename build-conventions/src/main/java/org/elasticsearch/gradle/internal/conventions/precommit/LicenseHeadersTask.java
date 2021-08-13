@@ -167,7 +167,7 @@ public abstract class LicenseHeadersTask extends DefaultTask {
             matchers.add(subStringMatcher(category, family, additional.getValue()));
         }
 
-        reportConfiguration.setHeaderMatcher(new HeaderMatcherMultiplexer(matchers.toArray(IHeaderMatcher[]::new)));
+        //reportConfiguration.setHeaderMatcher(new HeaderMatcherMultiplexer(matchers.toArray(IHeaderMatcher[]::new)));
         reportConfiguration.setApprovedLicenseNames(approvedLicenses.stream().map(license -> {
             SimpleLicenseFamily simpleLicenseFamily = new SimpleLicenseFamily();
             simpleLicenseFamily.setFamilyName(license);

@@ -267,11 +267,11 @@ public class SplitPackagesAuditTask extends DefaultTask {
                 if (classpathElement.isDirectory()) {
                     walkJavaFiles(classpathElement.toPath(), ".class", addClassPackage);
                 } else if (classpathElement.getName().endsWith(".jar")) {
-                    try (FileSystem jar = FileSystems.newFileSystem(classpathElement.toPath(), Map.of())) {
-                        for (Path root : jar.getRootDirectories()) {
-                            walkJavaFiles(root, ".class", addClassPackage);
-                        }
-                    }
+//                    try (FileSystem jar = FileSystems.newFileSystem(classpathElement.toPath(), Map.of())) {
+//                        for (Path root : jar.getRootDirectories()) {
+//                            walkJavaFiles(root, ".class", addClassPackage);
+//                        }
+//                    }
                 } else {
                     throw new GradleException("Unsupported classpath element: " + classpathElement);
                 }
